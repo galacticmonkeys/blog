@@ -1,26 +1,21 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: project_development
+  database: inventory_development
+  host: localhost
   pool: 5
-  username: 
-  password:
+  timeout: 5000
 
-test: &TEST
+test:
   adapter: postgresql
   encoding: utf8
-  database: project_test
+  database: inventory_test
   pool: 5
-  username: 
-  password:
+  timeout: 5000
 
 production:
   adapter: postgresql
   encoding: utf8
-  database: project_production
+  database: inventory_production
   pool: 5
-  username: 
-  password:
-
-cucumber:
-  <<: *TEST
+  timeout: 5000
